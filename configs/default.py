@@ -20,7 +20,7 @@ mutations["revdualchunk2"] = render_template("Transfer-Encoding: chunked\r\nTran
 mutations["commaCow"] = render_template("Transfer-Encoding: chunked, cow")
 mutations["cowComma"] = render_template("Transfer-Encoding: cow, chunked")
 mutations["x-nout"] = render_template("X:X\nTransfer-Encoding: chunked")
-mutations["cr2hyphen"] = render_template_te("Transfer\rEncoding: chunked")
+mutations["cr2hyphen"] = render_template("Transfer\rEncoding: chunked")
 mutations["linewrapped1"] = render_template("Transfer-Encoding:\n chunked")
 # mutations["tabprefix2"] = render_template("Transfer-Encoding\t:\tchunked")
 
