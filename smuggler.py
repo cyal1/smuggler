@@ -428,6 +428,8 @@ if __name__ == "__main__":
 
 
 		host, port, endpoint, SSLFlagval = process_uri(server[0])
+		if endpoint == "":
+			endpoint = "/"
 		method = server[1].upper()
 		configfile = Args.configfile
 
